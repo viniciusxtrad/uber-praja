@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TERRA CAR Premium | Viagens com Estilo, Segurança e Conforto</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Serviço premium de transporte com motorista profissional em Cianorte, Maringá, Curitiba e região. Ideal para quem busca tranquilidade e discrição." />
+
+  <!-- Open Graph Tags para pré-visualização no WhatsApp, Facebook, etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="🚗💨 Precisa de carro particular HOJE? Abre no Whats que eu vou até você" />
+  <meta property="og:description" content="🚗💨 Precisa de carro particular HOJE? Abre no Whats que eu vou até você, Serviço exclusivo de transporte premium no Paraná: Terra boa, Cianorte, Campo Mourão, Maringá, Curitiba e região. Motorista profissional, discreto e confiável." />
+  <meta property="og:image" content="https://viniciusxtrad.github.io/uber-cyberpunk/genpartede.jpg" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="TERRA CAR Premium - Serviço de transporte de luxo no Paraná" />
+  <meta property="og:url" content="https://motoristapremium.onrender.com" />
+  <meta property="og:site_name" content="TERRA CAR Premium Paraná" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card Tags (WhatsApp também lê estas) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="🚗 TERRA CAR Premium – Conforto, Segurança e Estilo no Paraná" />
+  <meta name="twitter:description" content="🚗💨 Precisa de carro particular HOJE? Abre no Whats que eu vou até você, Serviço exclusivo de transporte premium no Paraná: Terra boa, Cianorte, Campo Mourão, Maringá, Curitiba e região. Motorista profissional, discreto e confiável." />
+  <meta name="twitter:image" content="https://viniciusxtrad.github.io/uber-cyberpunk/genpartede.jpg" />
+  <meta name="twitter:image:alt" content="TERRA CAR Premium Paraná" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://motoristapremium.onrender.com" />
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cyber-purple: #8A2BE2;
+      --cyber-pink: #FF00FF;
+      --cyber-blue: #00F0FF;
+      --dark-bg: #0b0b14;
+      --light-text: #f0f0ff;
+      --mid-gray: #222233;
+      --card-bg: rgba(20, 20, 40, 0.7);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark-bg);
+      color: var(--light-text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(15, 15, 25, 0.95);
+      box-shadow: 0 0 50px rgba(138, 43, 226, 0.2);
+      border: 1px solid rgba(138, 43, 226, 0.3);
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Imagem Hero no topo */
+    .hero-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(10, 10, 20, 0.8), rgba(20, 10, 40, 0.9)),
+                  url('https://images.unsplash.com/photo-1595057403432-7b5107586f06?w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 30px 80px;
+      text-align: center;
+      position: relative;
+      border-bottom: 2px solid var(--cyber-blue);
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      background: linear-gradient(to right, var(--cyber-blue), var(--cyber-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-weight: 400;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0, 240, 255, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 240, 255, 0.5);
+    }
+
+    .section {
+      padding: 70px 30px;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2em;
+      color: var(--cyber-blue);
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    }
+
+    .destinos {
+      background: var(--mid-gray);
+      border-top: 1px solid rgba(138, 43, 226, 0.2);
+      border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    }
+
+    .destinos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .destino-card {
+      background: var(--card-bg);
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(138, 43, 226, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .destino-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+      border-color: var(--cyber-blue);
+    }
+
+    .destino-icon {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: var(--cyber-pink);
+    }
+
+    .destino-name {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: var(--light-text);
+    }
+
+    .destinos-text {
+      text-align: center;
+      font-size: 1.1em;
+      color: #aaa;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .diferenciais {
+      background: rgba(10, 10, 20, 0.9);
+    }
+
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .diferencial-card {
+      background: var(--card-bg);
+      padding: 35px 25px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .diferencial-card:hover {
+      border-color: var(--cyber-pink);
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.25);
+    }
+
+    .diferencial-icon {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, var(--cyber-blue), var(--cyber-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .diferencial-title {
+      font-size: 1.4em;
+      color: var(--cyber-blue);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .diferencial-text {
+      font-size: 1.05em;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .tipos-viagem {
+      background: linear-gradient(135deg, #0d0d1a 0%, #150f2a 100%);
+      color: #fff;
+      border-top: 1px solid rgba(0, 240, 255, 0.2);
+    }
+
+    .tipos-viagem .section-title {
+      color: var(--cyber-pink);
+    }
+
+    .tipos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .tipo-card {
+      background: var(--card-bg);
+      padding: 30px 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid rgba(255, 105, 180, 0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .tipo-card:hover {
+      background: rgba(30, 20, 50, 0.8);
+      border-color: var(--cyber-pink);
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.2);
+    }
+
+    .tipo-icon {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: var(--cyber-blue);
+    }
+
+    .tipo-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--light-text);
+    }
+
+    .tipo-text {
+      font-size: 1em;
+      color: #bbb;
+    }
+
+    .sobre {
+      background: var(--mid-gray);
+      text-align: center;
+      border-top: 1px solid rgba(138, 43, 226, 0.2);
+      border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    }
+
+    .sobre-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .sobre-icon {
+      font-size: 4.5em;
+      background: linear-gradient(to right, var(--cyber-pink), var(--cyber-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+    }
+
+    .sobre-text {
+      font-size: 1.2em;
+      color: #ddd;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .cta-final {
+      background: linear-gradient(135deg, rgba(10, 10, 20, 0.95), rgba(20, 10, 40, 0.95));
+      color: #fff;
+      text-align: center;
+      padding: 80px 30px;
+      border-top: 2px solid var(--cyber-pink);
+    }
+
+    .cta-final h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.3em;
+      margin-bottom: 25px;
+      background: linear-gradient(to right, var(--cyber-pink), var(--cyber-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cta-final p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ccc;
+    }
+
+    .cta-button-white {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0, 240, 255, 0.3);
+      transition: all 0.3s ease;
+      display: inline-block;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .cta-button-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0, 240, 255, 0.5);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 70px;
+      height: 70px;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 36px;
+      box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+      border: 2px solid white;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 40px rgba(37, 211, 102, 0.8);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .footer {
+      background: #080810;
+      color: #888;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.95em;
+      border-top: 1px solid rgba(138, 43, 226, 0.2);
+    }
+
+    .footer p {
+      margin: 8px 0;
+    }
+
+    .footer strong {
+      color: var(--cyber-blue);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1.1em;
+      }
+
+      .section-title {
+        font-size: 1.8em;
+      }
+
+      .cta-button, .cta-button-white {
+        font-size: 1.1em;
+        padding: 16px 36px;
+      }
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .hero-image {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Imagem Hero no topo (mesma das meta tags) -->
+    <img class="hero-image" src="https://viniciusxtrad.github.io/uber-cyberpunk/marauber092.jpg" alt="TERRA CAR Premium - Transporte de luxo no Paraná" />
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>TERRA CAR PREMIUM<br>Conforto e Segurança</h1>
+      <p>Serviço exclusivo de transporte premium no Paraná: Cianorte, Campo Mourão, Maringá, Curitiba e região. Motorista profissional, discreto e confiável.</p>
+      <a href="https://wa.me/554499280568?text=Olá!%20Gostaria%20de%20cotar%20uma%20viagem%20premium%20e%20saber%20mais." class="cta-button">
+        💬 Solicitar Agora no WhatsApp
+      </a>
+    </div>
+
+    <!-- Seção Destinos -->
+    <div class="section destinos">
+      <h2 class="section-title">Rotas Premium</h2>
+      <p style="text-align: center; font-size: 1.2em; color: #bbb; margin-bottom: 40px;">
+        Viagens personalizadas para negócios, lazer ou compromissos importantes:
+      </p>
+      <div class="destinos-grid">
+        <div class="destino-card">
+          <div class="destino-icon">📍</div>
+          <div class="destino-name">Cianorte</div>
+        </div>
+        <div class="destino-card">
+          <div class="destino-icon">📍</div>
+          <div class="destino-name">Campo Mourão</div>
+        </div>
+        <div class="destino-card">
+          <div class="destino-icon">📍</div>
+          <div class="destino-name">Maringá</div>
+        </div>
+        <div class="destino-card">
+          <div class="destino-icon">📍</div>
+          <div class="destino-name">Curitiba</div>
+        </div>
+        <div class="destino-card">
+          <div class="destino-icon">🗺️</div>
+          <div class="destino-name">Região Completa</div>
+        </div>
+      </div>
+      <p class="destinos-text">
+        <strong>Precisa ir para outro destino?</strong> Consulte disponibilidade!
+      </p>
+    </div>
+
+    <!-- Diferenciais -->
+    <div class="section diferenciais">
+      <h2 class="section-title">Por Que Escolher o TERRA CAR Premium?</h2>
+      <div class="diferenciais-grid">
+        <div class="diferencial-card">
+          <div class="diferencial-icon">🛡️</div>
+          <div class="diferencial-title">Segurança Total</div>
+          <div class="diferencial-text">
+            Motorista experiente, com treinamento em direção defensiva e respeito total às leis de trânsito.
+          </div>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">✨</div>
+          <div class="diferencial-title">Conforto Premium</div>
+          <div class="diferencial-text">
+            Veículo moderno, higienizado, com ar-condicionado, ambiente silencioso.
+          </div>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">⏰</div>
+          <div class="diferencial-title">Pontualidade</div>
+          <div class="diferencial-text">
+            Chegamos no horário marcado. Serviço com total discrição.
+          </div>
+        </div>
+
+        <div class="diferencial-card">
+          <div class="diferencial-icon">🌸</div>
+          <div class="diferencial-title">Atendimento Personalizado</div>
+          <div class="diferencial-text">
+            Priorizamos seu conforto. Ambiente acolhedor, respeitoso e seguro.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tipos de Viagem -->
+    <div class="section tipos-viagem">
+      <h2 class="section-title">Ideal Para</h2>
+      <div class="tipos-grid">
+        <div class="tipo-card">
+          <div class="tipo-icon">✈️</div>
+          <div class="tipo-title">Aeroportos</div>
+          <div class="tipo-text">Londrina, Maringá, Afonso Pena</div>
+        </div>
+
+        <div class="tipo-card">
+          <div class="tipo-icon">🏥</div>
+          <div class="tipo-title">Consultas Médicas</div>
+          <div class="tipo-text">Exames, terapias e tratamentos</div>
+        </div>
+
+        <div class="tipo-card">
+          <div class="tipo-icon">💼</div>
+          <div class="tipo-title">Reuniões Corporativas</div>
+          <div class="tipo-text">Chegue com elegância e tranquilidade</div>
+        </div>
+
+        <div class="tipo-card">
+          <div class="tipo-icon">👗</div>
+          <div class="tipo-title">Eventos & Lazer</div>
+          <div class="tipo-text">Casamentos, festas, compras e mais</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sobre -->
+    <div class="section sobre">
+      <h2 class="section-title">Sobre o Serviço</h2>
+      <div class="sobre-content">
+        <div class="sobre-icon">👩‍✈️</div>
+        <p class="sobre-text">
+          Um serviço premium pensado para pessoas exigentes. Oferecemos discrição, profissionalismo e um ambiente seguro para você relaxar durante o trajeto.
+        </p>
+        <p class="sobre-text">
+          <strong>Estilo, segurança e tranquilidade</strong> — em cada quilômetro.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Final -->
+    <div class="cta-final">
+      <h2>Agende Sua Viagem Premium Hoje!</h2>
+      <p>
+        Esqueça transportes impessoais. Tenha um motorista confiável para cada ocasião.
+      </p>
+      <a href="https://wa.me/554499280568?text=Olá!%20Quero%20agendar%20minha%20viagem%20premium.%20Meu%20destino%20é:" class="cta-button-white">
+        🚗 Falar Agora no WhatsApp
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><strong>TERRA CAR Premium | Paraná</strong></p>
+      <p>📍 Cianorte • Campo Mourão • Maringá • Curitiba • Região</p>
+      <p>🚗 Segurança • Conforto • Estilo</p>
+      <p style="margin-top: 15px;">© 2025 – Todos os direitos reservados</p>
+    </div>
+  </div>
+
+  <!-- Botão WhatsApp Flutuante -->
+  <a href="https://wa.me/554499280568?text=Olá!%20Gostaria%20de%20cotar%20uma%20viagem%20premium%20e%20saber%20mais." class="whatsapp-float" target="_blank">
+    💬
+  </a>
+</body>
+</html>
